@@ -1,0 +1,313 @@
+Delivered-To: austinjhicks@gmail.com
+Received: by 2002:a2e:b175:0:b0:396:a826:a248 with SMTP id a21csp498407ljm;
+        Sun, 14 Jun 2026 07:08:34 -0700 (PDT)
+X-Received: by 2002:a05:6102:1525:b0:6d3:4e:6d80 with SMTP id ada2fe7eead31-71e89b828f4mr4239845137.11.1781446113983;
+        Sun, 14 Jun 2026 07:08:33 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1781446113; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=FrdFe97KsBwTdARYJ87dpPLDJxVVMPjtpc5S28MqmSNi/Vb+5ycUAKd0Et6wcYJWnL
+         Eu2/1VthzabBW32TDMAqE4nGUnxYMBvmuYGSgCZn9MP86D1xHfvHbWS7XVp3HA56JmK+
+         4YD2TZQBMu5H/j1UbLPKtDT63S8EZUcB9ejbhT46H3BVvMnwMXjmOCe3Yc6R8m/MxOa0
+         9PEnWSFjsqXBG/8EEbuyVEInWvPIz70oa7ngd+f8d3Zg1EzCbP8zXOO2agq1RRWILlQE
+         W9IkdTMnLU7M5yITmrqO/lvfM+moeO+iNcvmNiEwDDy9yGujfLncm0VNHLKI+foAOvLH
+         PKGw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=BCaV1eBdBOLfW3KabKYedwEI72FOVGnthG4zoyAmlCs=;
+        fh=eUhQtSR+eTQC/skvuJA9F0wWP8+HLQ+2uQw3XCPSFek=;
+        b=OX8YSTVJdDiDG8eCuQdqIAzGOVnAvFeLisMad17njlNqGSvlLqgoLjA8DUF/cbnpap
+         e0U0+XNIMTFoogj/M9VT2rCm+p+FpU4zJLXmbJxYWlUVTTuQempf+ktxwrpfrbIhJepc
+         fEVTKZre2GsTGJMoy3ciNLPTDHS11t8pycrFPjf4w4Md6ZO4SEdWcsOgFMaBvbgV/DvR
+         oQP2xffFiuL2V81IQFb5NP5h7wUwoCt9AVAPbjU3ZIr/5dw+MM44Gx7Ste2rKNEftliA
+         EYQsmKHeMtvubO26qV6rwbtXqWzo5ijiURAvgk4XkA8cHpy3BsNsDqwvyAB+0Wy0IEaM
+         bb7w==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=ApLM0+VS;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of duleyj.jd@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=duleyj.jd@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <duleyj.jd@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-7208a81d445sor534062137.4.2026.06.14.07.08.33
+        for <AUSTINJHICKS@gmail.com>
+        (Google Transport Security);
+        Sun, 14 Jun 2026 07:08:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of duleyj.jd@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=ApLM0+VS;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of duleyj.jd@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=duleyj.jd@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1781446113; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lqg+O3y0+OGvyklonMbbwlKhiyu0ofbT632fZfBL+Wzf2O0Yu8RVoBPjtxrvfctHMZ
+         8eI6c9JNv9tBRGdZHHi2x7ADfUl35JoysjRsFP8BhUwZPBt+Lg88W1UdLtjM0X3j/bvz
+         Z/J0LkUsc01d2rhPjQ11V/rlh6C7pyMPBFJO9jYOCQCVbltSgerQZqfUMGiIkSI6ewE9
+         C6He+gsGdZok1YIoMZheUNU+zB6uW+ALeO3l0NWC9PBoiAhkwmMluJamxektfW0rcMmY
+         PRj3lVeBmTK5GKxiqDGNKDu6WT3STtkijkDkwL9BTccD8/EeSmc2PLSoWjTwmeXZO99O
+         j9rA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=BCaV1eBdBOLfW3KabKYedwEI72FOVGnthG4zoyAmlCs=;
+        fh=eUhQtSR+eTQC/skvuJA9F0wWP8+HLQ+2uQw3XCPSFek=;
+        b=k9RIep1VrXVzxvCblvTbzRq/yGQC7rEl2HjyER97g3ZPr0fb9xtn5xDFEW7Qj3wLmU
+         R/YACTl14OrnOGhialsjiKupIQZo9exJ+wh2J8h4Ct+27sJBmp2fn3Eif0rG6uiVDLSz
+         sWsjo3Wgfao60t2bClfCjMOHJmuLMhSHkuH07QNC57aqeyQxpoynC7H7RJn0pVkoqu/X
+         28iXl+MRDuq8pzD3TBDpuU3vQw5D7xDsQ3uNhofmLWVblSr5JPK7gDfqqaKSbiVoc+j1
+         vSU/1JK6JMDx1DGE6LunieCCG9BmLWDVs0B/CXbMVh/rdjvrs/bv5iJy44lxCEMm+HIg
+         C5EA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1781446113; x=1782050913; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=BCaV1eBdBOLfW3KabKYedwEI72FOVGnthG4zoyAmlCs=;
+        b=ApLM0+VSu6a/6hjZU3H10yjoIljMtgJAWBD/J4LwwvQW6qclP4MzPX/+9/MgjQErNZ
+         N03dBBymY8ZCyFlxRcLiBtyc9OkT6ZnCRG/ljfUfiOdPDMeqbKPcHCS2o9n2Lg+fecFH
+         MIhbEaATzf4ook1ANYOW9Nc8fllTrq7FGbLUScoREbSwj0hv+lSauRPSSkgdknECqfUx
+         KlcfFai8hT1vVPNaCs1yLjhh5/fzXnT91ztfz+T57F8aUTildVj/21xPddiC68iM9Eez
+         y8SWVy39kK29MVeN5TkxtfZ0bynfEr0BQRkAcwYscSq1wXEJYFycTtRWXcIQOQNMhhRO
+         wKVA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1781446113; x=1782050913;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=BCaV1eBdBOLfW3KabKYedwEI72FOVGnthG4zoyAmlCs=;
+        b=JrihoLJthxcHzO3SSpWGNp0FCOGewRonxVuu7NovLKVU+qBTGQK7WIQGWWxj/x6Yj0
+         nSLd72nf4sP/TKzHy++qj2+VV9gCDHwTguwu1CfX+R/I/gd6MLNIJwhCciPP8K2xcEdO
+         uFiKDsMAP2voq6cigdZdSyBbGQt3zAqSNhEaaaz9HEEY3hk7wk0QFB6ZZmCudLQm9vWu
+         Mq8XtfAWE0pvVfLdnBxK7Wh/Zyfpno/GSTTXDv4njbPFned/W/JCINBKh9lT5SXLvF2P
+         zHIYQseoZdy0RGi5UqfkmF5tAH7RlchXzp8E9Lz5GkYNE7K3owOXUdfJ/Ed9uL2S0waO
+         OEUA==
+X-Gm-Message-State: AOJu0YxKGh3u/7fOKyQhOeRoaZnjTK3NPAc1eDLwkJwEQ44NnFDaWL2J
+	K20e53fbugswQ07YXxhE4ZTdpxEvCRjGjadtWVpP3pnqP50su8L3ynqx8sQ2aLNFI+2wweS04sN
+	dl5S1AYyL0xp+ubWvbmDfrNczwFjZ3U69Ig==
+X-Gm-Gg: Acq92OFkyyZbMgIf4O4bYz7UFW39fDCSQrgF5P1kuuNWPwlgkwIXvhF9QSu0+PP970P
+	/CaQONdZxe6uEZolPI9Btf7+uWqiE6nyJe4RRkJoCX+WGvTDLRmipaKrv7rIcQaqvcid8SOhekY
+	TRmVBO8qdZRi4QPJeJQb++g0YBo/3vsxwkFlw7qFSqaQ/EYHDsLi8E2ZJ98metEqkGOg7p3/rQW
+	YSQal+axL1hD/0asutI9RtdlaEvuZk8ovALnzBN4Job+tIeIWgvQBz7FZH6Mc+q4tswjttljTOM
+	t/DRoLyT7xkR8qQ8UxB4Lr+Ku/Nc1cW0RYIjBwtAZg==
+X-Received: by 2002:a05:6102:44:b0:6cc:e6b1:7f84 with SMTP id
+ ada2fe7eead31-71e672df42dmr3245972137.17.1781446113444; Sun, 14 Jun 2026
+ 07:08:33 -0700 (PDT)
+MIME-Version: 1.0
+References: <0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000@us-west-2.messagingfabric.com>
+In-Reply-To: <0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000@us-west-2.messagingfabric.com>
+From: JD yandell <duleyj.jd@gmail.com>
+Date: Sun, 14 Jun 2026 10:08:21 -0400
+X-Gm-Features: AVVi8CczV65chc6W4yAc83bWT_T6xOgeBWaP3MIOZEKPn93tUYStcdlvfOPKLaM
+Message-ID: <CADm4j=i_Gg3KkuinJGZwTdUkiT6SyQ5OLapjfO-GEjRBnhjQXg@mail.gmail.com>
+Subject: Fwd: Released Opinions and Orders
+To: Austin Hicks <AUSTINJHICKS@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000c7471e0654373e0c"
+
+--000000000000c7471e0654373e0c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Austin,
+     Below is an example of public info that I receive an alert. I would
+also like to scrap the hyperlinks in the USPTO gazette and keep an ongoing
+file/database so I don't have to click through each time I am looking for
+something.
+
+---------- Forwarded message ---------
+From: U.S. Court of Appeals for the Federal Circuit <
+uscourts@updates.uscourts.gov>
+Date: Fri, Jun 12, 2026 at 12:02=E2=80=AFPM
+Subject: Released Opinions and Orders
+To: <duleyj.jd@gmail.com>
+
+
+[image: CAFC Header]
+
+The U.S. Court of Appeals for the Federal Circuit has released the
+following precedential and nonprecedential opinions and select judgments
+and orders:
+
+25-1968: FORAS TECHNOLOGIES LTD. v. BMW OF NORTH AMERICA, LLC [ORDER],
+Nonprecedential
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.cafc.uscourts.gov%2F06=
+-12-2026-25-1968-foras-technologies-ltd-v-bmw-of-north-america-llc-order-25=
+-1968-order-6-12-2026_2708873%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9=
+-7a6b1b9dc57b-000000/nsqnzg747JqH9otDZ7LqWeCtsmHmSLUDs4V2IutHG_0=3D452>
+24-1797: SCOTT v. COLLINS [ORDER], Nonprecedential
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.cafc.uscourts.gov%2F06=
+-11-2026-24-1797-scott-v-collins-order-24-1797-order-6-11-2026_2708574%2F/1=
+/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/E5vDHk1P0RATb=
+ixwVDW8fIZ0wA458Dec52AxxNXRA2s=3D452>
+
+To view or to search for other opinions and orders, visit our website
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fcafc.uscourts.gov%2Fhome%2=
+Fcase-information%2Fopinions-orders%2F/1/0101019ebc91afaf-8d3352a4-5132-42f=
+3-91e9-7a6b1b9dc57b-000000/3XsItt6j8P2QbhJLx3LAEFJOOBAovnuCfsoeBNsmo3w=3D45=
+2>
+.
+------------------------------
+
+Having trouble viewing this email? View it as a Web page
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fcontent.govdelivery.com%2F=
+accounts%2FUSFEDCOURTS%2Fbulletins%2F41bbb7c/1/0101019ebc91afaf-8d3352a4-51=
+32-42f3-91e9-7a6b1b9dc57b-000000/FgJ1_U4nf3IN1A13zppYvpChkYOuxALgAnENLHnkHN=
+A=3D452>
+.
+
+Questions? Contact the Clerk's Office
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fcafc.uscourts.gov%2Fcontac=
+t-us%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/qcLi=
+Lj7FUsXaM7rh94qBGvTWFhvcAWQCGk2r_OOoUrc=3D452>
+or visit the Federal Circuit's website
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.cafc.uscourts.gov/1/01=
+01019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/R4A1jcjZaU452ZQk=
+1n1m0REUfNszoh3zs_asHgtgM8c=3D452>
+.
+
+SUBSCRIBER SERVICES:
+Manage Preferences
+<https://links-2.govdelivery.com/CL0/http:%2F%2Fpublic.govdelivery.com%2Fac=
+counts%2FUSFEDCOURTS%2Fsubscribers%2Fnew%3Fpreferences=3Dtrue/1/0101019ebc9=
+1afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/r6g_RjyFptiSIXI0sYSl_KE_L=
+AVUzgiKR6swdW8k2VQ=3D452>
+  |  Unsubscribe
+<https://links-2.govdelivery.com/CL0/http:%2F%2Fpublic.govdelivery.com%2Fac=
+counts%2FUSFEDCOURTS%2Fsubscribers%2Fnew%3Fpreferences=3Dtrue/2/0101019ebc9=
+1afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/4SPcT-xkpguG50WhhneGWXxNi=
+1VGsp1Bgx4VJkwUYXU=3D452>
+  |  Help
+<https://links-2.govdelivery.com/CL0/https:%2F%2Fsubscriberhelp.govdelivery=
+.com%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/58yq=
+wH09ijwYOJDfrvMoA4-qU4Kr9zTuwHyOdd11fsk=3D452>
+
+This message was sent by the United States Courts
+
+--000000000000c7471e0654373e0c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Austin,<div>=C2=A0 =C2=A0 =C2=A0Below is an example of =
+public info that I receive an alert. I would also like to scrap the hyperli=
+nks in the USPTO gazette and keep an ongoing file/database so I don&#39;t h=
+ave to click through each time I am looking for something.</div><div><br><d=
+iv class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gm=
+ail_attr">---------- Forwarded message ---------<br>From: <strong class=3D"=
+gmail_sendername" dir=3D"auto">U.S. Court of Appeals for the Federal Circui=
+t</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:uscourts@updates.uscour=
+ts.gov">uscourts@updates.uscourts.gov</a>&gt;</span><br>Date: Fri, Jun 12, =
+2026 at 12:02=E2=80=AFPM<br>Subject: Released Opinions and Orders<br>To:  &=
+lt;<a href=3D"mailto:duleyj.jd@gmail.com">duleyj.jd@gmail.com</a>&gt;<br></=
+div><br><br><u></u>
+
+
+
+
+
+
+<div>
+
+      <table width=3D"700" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center">
+        <tbody><tr>
+          <td>
+
+
+<a name=3D"m_8071804335954687469_gd_top" id=3D"m_8071804335954687469gd_top"=
+></a>
+
+ =20
+
+
+
+  <p><img src=3D"https://content.govdelivery.com/attachments/fancy_images/U=
+SFEDCOURTS/2025/01/10797463/govdeliveryheader_original.png" alt=3D"CAFC Hea=
+der" title=3D"" width=3D"781" height=3D"137"></p>
+  <p><font face=3D"arial,helvetica,sans-serif" size=3D"3">The U.S. Court of=
+ Appeals for the Federal Circuit has released the following precedential an=
+d nonprecedential opinions and select judgments and orders: </font></p>
+<p style=3D"padding-left:30px"><font face=3D"arial,helvetica,sans-serif" si=
+ze=3D"3"></font></p><div style=3D"margin-bottom:2em"><font face=3D"arial,he=
+lvetica,sans-serif" size=3D"3">
+<div style=3D"font-weight:bold;font-size:120%;margin:0 0 0.3em;padding:0"><=
+a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.cafc.uscourts=
+.gov%2F06-12-2026-25-1968-foras-technologies-ltd-v-bmw-of-north-america-llc=
+-order-25-1968-order-6-12-2026_2708873%2F/1/0101019ebc91afaf-8d3352a4-5132-=
+42f3-91e9-7a6b1b9dc57b-000000/nsqnzg747JqH9otDZ7LqWeCtsmHmSLUDs4V2IutHG_0=
+=3D452" target=3D"_blank">25-1968: FORAS TECHNOLOGIES LTD. v. BMW OF NORTH =
+AMERICA, LLC [ORDER], Nonprecedential</a></div>
+</font></div><font face=3D"arial,helvetica,sans-serif" size=3D"3">
+<div style=3D"margin-bottom:2em">
+<div style=3D"font-weight:bold;font-size:120%;margin:0 0 0.3em;padding:0"><=
+a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.cafc.uscourts=
+.gov%2F06-11-2026-24-1797-scott-v-collins-order-24-1797-order-6-11-2026_270=
+8574%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/E5vD=
+Hk1P0RATbixwVDW8fIZ0wA458Dec52AxxNXRA2s=3D452" target=3D"_blank">24-1797: S=
+COTT v. COLLINS [ORDER], Nonprecedential</a></div>
+</div>
+
+</font><p></p>
+<p><font face=3D"arial,helvetica,sans-serif" size=3D"3">To view or to searc=
+h for other opinions and orders, visit our <a href=3D"https://links-2.govde=
+livery.com/CL0/https:%2F%2Fcafc.uscourts.gov%2Fhome%2Fcase-information%2Fop=
+inions-orders%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-00=
+0000/3XsItt6j8P2QbhJLx3LAEFJOOBAovnuCfsoeBNsmo3w=3D452" rel=3D"noopener" ta=
+rget=3D"_blank">website</a>.</font></p>
+ =20
+
+
+<div id=3D"m_8071804335954687469mail_footer">
+    <hr>
+<p style=3D"color:#666666;font-family:Arial,Verdana,sans-serif;font-size:12=
+px">Having trouble viewing this email? <a href=3D"https://links-2.govdelive=
+ry.com/CL0/https:%2F%2Fcontent.govdelivery.com%2Faccounts%2FUSFEDCOURTS%2Fb=
+ulletins%2F41bbb7c/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-=
+000000/FgJ1_U4nf3IN1A13zppYvpChkYOuxALgAnENLHnkHNA=3D452" target=3D"_blank"=
+>View it as a Web page</a>.</p>
+<p style=3D"color:#666666;font-family:Arial,Verdana,sans-serif;font-size:12=
+px">Questions? Contact the=C2=A0<a href=3D"https://links-2.govdelivery.com/=
+CL0/https:%2F%2Fcafc.uscourts.gov%2Fcontact-us%2F/1/0101019ebc91afaf-8d3352=
+a4-5132-42f3-91e9-7a6b1b9dc57b-000000/qcLiLj7FUsXaM7rh94qBGvTWFhvcAWQCGk2r_=
+OOoUrc=3D452" rel=3D"noopener" target=3D"_blank">Clerk&#39;s Office</a> or =
+visit the <a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.ca=
+fc.uscourts.gov/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000=
+000/R4A1jcjZaU452ZQk1n1m0REUfNszoh3zs_asHgtgM8c=3D452" rel=3D"noopener" tar=
+get=3D"_blank">Federal Circuit&#39;s website</a>.</p>
+<p style=3D"color:#666666;font-family:Arial,Verdana,sans-serif;font-size:12=
+px">SUBSCRIBER SERVICES:<br><a href=3D"https://links-2.govdelivery.com/CL0/=
+http:%2F%2Fpublic.govdelivery.com%2Faccounts%2FUSFEDCOURTS%2Fsubscribers%2F=
+new%3Fpreferences=3Dtrue/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9=
+dc57b-000000/r6g_RjyFptiSIXI0sYSl_KE_LAVUzgiKR6swdW8k2VQ=3D452" target=3D"_=
+blank">Manage Preferences</a>=C2=A0=C2=A0|=C2=A0=C2=A0<a href=3D"https://li=
+nks-2.govdelivery.com/CL0/http:%2F%2Fpublic.govdelivery.com%2Faccounts%2FUS=
+FEDCOURTS%2Fsubscribers%2Fnew%3Fpreferences=3Dtrue/2/0101019ebc91afaf-8d335=
+2a4-5132-42f3-91e9-7a6b1b9dc57b-000000/4SPcT-xkpguG50WhhneGWXxNi1VGsp1Bgx4V=
+JkwUYXU=3D452" target=3D"_blank">Unsubscribe</a>=C2=A0=C2=A0|=C2=A0=C2=A0<a=
+ href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fsubscriberhelp.gov=
+delivery.com%2F/1/0101019ebc91afaf-8d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000=
+000/58yqwH09ijwYOJDfrvMoA4-qU4Kr9zTuwHyOdd11fsk=3D452" rel=3D"noopener" tar=
+get=3D"_blank">Help</a></p>
+
+</div>
+<div id=3D"m_8071804335954687469tagline">
+    <p style=3D"color:#757575;font-size:10px;font-family:Arial">This messag=
+e was sent by the United States Courts</p>
+
+
+</div>
+          </td>
+        </tr>
+      </tbody></table>
+
+<img alt=3D"" src=3D"https://links-2.govdelivery.com/CI0/0101019ebc91afaf-8=
+d3352a4-5132-42f3-91e9-7a6b1b9dc57b-000000/RJHgYOoA9o1dLb7fI8Mq7eg2-ATysyef=
+4-2MELYudqo=3D452" style=3D"display:none;width:1px;height:1px">
+</div>
+
+</div></div></div>
+
+--000000000000c7471e0654373e0c--
