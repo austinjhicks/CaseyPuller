@@ -2,6 +2,16 @@
 
 Patent Opinion Monitor is an open-source tool for tracking patent-related legal developments that may matter to specific patents, patent owners, accused infringers, applicants, or other interested parties.
 
+## Quick Start
+
+1. Download the latest release ZIP.
+2. Extract the folder.
+3. Double-click START_CASEYPULLER.bat or CaseyPuller.exe.
+4. Open http://127.0.0.1:5000.
+5. Upload a Federal Circuit `.eml` email.
+6. Edit `patsORparties.csv`.
+7. Click Search Opinions.
+
 ## Goal
 
 The current goal is to let a user provide a list of patents, applications, parties, or companies, and then automatically monitor public legal sources for relevant updates.
